@@ -14,10 +14,8 @@ namespace storeAPIService.DTOs.Product
         public string Model  { get; set; } = string.Empty;
         public string Color { get; set; } = string.Empty;
         [RegularExpression(@"^#(?:[0-9a-fA-F]{3}){1,2}$", 
-         ErrorMessage = "Invalid hexadecimal clor")]
+         ErrorMessage = "Invalid hexadecimal color")]
         public string HexColor { get; set; } = string.Empty;
-        [RegularExpression(@"^[-A-Za-z0-9+/=]|=[^=]|={3,}$", 
-         ErrorMessage = "Invalid hexadecimal clor")]
         public string B64Image { get; set; } = string.Empty;
         public string Properties { get; set; } = string.Empty;
         public decimal Price { get; set; }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using storeAPIService.Migrations;
+//using storeAPIService.Migrations;
 using storeAPIService.Models;
 
 namespace storeAPIService.Data

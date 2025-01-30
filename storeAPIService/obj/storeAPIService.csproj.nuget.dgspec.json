@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/dotnet-node-mssql/storeAPIService/storeAPIService.csproj": {}
+    "/workspaces/dotnetSampleApi/storeAPIService/storeAPIService.csproj": {}
   },
   "projects": {
-    "/workspaces/dotnet-node-mssql/storeAPIService/storeAPIService.csproj": {
+    "/workspaces/dotnetSampleApi/storeAPIService/storeAPIService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/dotnet-node-mssql/storeAPIService/storeAPIService.csproj",
+        "projectUniqueName": "/workspaces/dotnetSampleApi/storeAPIService/storeAPIService.csproj",
         "projectName": "storeAPIService",
-        "projectPath": "/workspaces/dotnet-node-mssql/storeAPIService/storeAPIService.csproj",
+        "projectPath": "/workspaces/dotnetSampleApi/storeAPIService/storeAPIService.csproj",
         "packagesPath": "/home/vscode/.nuget/packages/",
-        "outputPath": "/workspaces/dotnet-node-mssql/storeAPIService/obj/",
+        "outputPath": "/workspaces/dotnetSampleApi/storeAPIService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vscode/.nuget/NuGet/NuGet.Config"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -71,10 +72,6 @@
               "target": "Package",
               "version": "[9.0.1, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[9.0.1, )"
-            },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[8.0.12, )"
@@ -82,6 +79,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -99,6 +100,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -107,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
