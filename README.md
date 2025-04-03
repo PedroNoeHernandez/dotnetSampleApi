@@ -3,11 +3,9 @@
 ## pasos para iniciar el api 
 
 1. Crear la base de datos en postgreSQL
+> [!IMPORTANT]
+> Los comandos deben ser ejecutados como root para evitar problemas de permisos en archivos
 
-* ejecutta los siguientes comandos:
-    ```cmd 
-    dotnet tool install --global dotnet-ef --version 8.0.0
-    ```
 
 ```
 sudo su
