@@ -26,7 +26,6 @@ namespace storeAPIService.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetAll([FromQuery]QueryObject query){
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -46,6 +45,7 @@ namespace storeAPIService.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateProductRequest ProductDTO ){
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -55,6 +55,7 @@ namespace storeAPIService.Controllers
         }
         [HttpPut]
         [Route("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Update([FromRoute] int id,[FromBody] UpdateProductRequest ProductDTO){
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -66,6 +67,7 @@ namespace storeAPIService.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Delete([FromRoute] int id){
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);

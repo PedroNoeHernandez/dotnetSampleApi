@@ -10,6 +10,7 @@ using storeAPIService.Mappers;
 using storeAPIService.Interfaces;
 using storeAPIService.Models;
 using storeAPIService.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace storeAPIService.Controllers
 {
@@ -59,6 +60,7 @@ namespace storeAPIService.Controllers
         }
         [HttpPut]
         [Route("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Update([FromRoute] int id,[FromBody] UpdateCommentRequest CommentDTO){
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -70,6 +72,7 @@ namespace storeAPIService.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Delete([FromRoute] int id){
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
