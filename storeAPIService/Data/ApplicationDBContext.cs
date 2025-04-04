@@ -15,7 +15,7 @@ namespace storeAPIService.Data
         public ApplicationDBContext(DbContextOptions dbContextOptions)
         :base(dbContextOptions)
         {
-   
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
         public DbSet<Product> Product {get;set;}
         public DbSet<Comment> Comment {get;set;}

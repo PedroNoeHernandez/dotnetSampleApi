@@ -14,13 +14,13 @@ namespace storeAPIService.DTOs.Comment
         public int Stars { get; set; }
         [Required]
         [MinLength(5,ErrorMessage = "Value must be 5 character at lease")]
-        [MaxLength(30,ErrorMessage = "Value cant have more than 30  characters")]
+        [MaxLength(200,ErrorMessage = "Value cant have more than 200  characters")]
         public string Title { get; set; } = string.Empty;
         [Required]
-        [MinLength(5,ErrorMessage = "Value must be 15 character at lease")]
-        [MaxLength(30,ErrorMessage = "Value cant have more than 200  characters")]
+        [MinLength(15,ErrorMessage = "Value must be 15 character at lease")]
+        [MaxLength(500,ErrorMessage = "Value cant have more than 500  characters")]
         public string Content { get; set; } = string.Empty;
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
+        public DateTime? CreatedOn { get; set; } = DateTime.Now;
 
     }
 }
